@@ -12,9 +12,9 @@ public class BunTest {
 
     private static Stream<Arguments> bunProvider() {
         return Stream.of(
-                Arguments.of("Small bun", 100.5f),
-                Arguments.of("Average bun", 200f),
-                Arguments.of("Big bun", 300.78f)
+                Arguments.of("black bun", 100),
+                Arguments.of("white bun", 200),
+                Arguments.of("red bun", 300)
         );
     }
 
@@ -23,7 +23,7 @@ public class BunTest {
     @DisplayName("getName возвращает корректное название булочки")
     public void getNameReturnsCorrectName(String name, float price) {
         Bun bun = new Bun(name, price);
-        assertEquals(name, bun.getName());
+        assertEquals(name, bun.getName(), "Проверка, что название булочки совпадает  с переданным");
     }
 
     @ParameterizedTest
@@ -31,6 +31,6 @@ public class BunTest {
     @DisplayName("getPrice возвращает корректную цену булочки")
     public void getPriceReturnsCorrectPrice(String name, float price) {
         Bun bun = new Bun(name, price);
-        assertEquals(price, bun.getPrice(), 0.001);
+        assertEquals(price, bun.getPrice(), 0.001, "Проверка, что цена булочки совпадает с переданной");
     }
 }
