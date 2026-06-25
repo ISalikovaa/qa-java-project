@@ -21,7 +21,7 @@ public class IngredientTest {
 
     @ParameterizedTest
     @MethodSource("ingredientProvider")
-    @DisplayName("getPrice возвращает корректную цену ингредиента")
+    @DisplayName("Проверка, что getPrice возвращает корректную цену ингредиента")
     public void getPriceReturnsCorrectPrice(IngredientType type, String name, float price) {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals(price, ingredient.getPrice(), 0.001, "Проверка, что цена ингредиента совпадает с переданной");
@@ -29,7 +29,7 @@ public class IngredientTest {
 
     @ParameterizedTest
     @MethodSource("ingredientProvider")
-    @DisplayName("getName возвращает корректное название ингредиента")
+    @DisplayName("Проверка, что getName возвращает корректное название ингредиента")
     public void getNameReturnsCorrectName(IngredientType type, String name, float price) {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals(name, ingredient.getName(), "Проверка, что название ингредиента совпадает с переданным");
@@ -37,9 +37,9 @@ public class IngredientTest {
 
     @ParameterizedTest
     @MethodSource("ingredientProvider")
-    @DisplayName("getType возвращает корректный тип ингредиента")
+    @DisplayName("Проверка, что getType возвращает корректный тип ингредиента")
     public void getTypeReturnsCorrectType(IngredientType type, String name, float price) {
         Ingredient ingredient = new Ingredient(type, name, price);
-        assertEquals(type, ingredient.getType(), "Проверка, что тип ингредиента должен совпадает с переданным");
+        assertEquals(type, ingredient.getType(), "Проверка, что тип ингредиента совпадает с переданным");
     }
 }
