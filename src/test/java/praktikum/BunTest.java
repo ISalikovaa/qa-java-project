@@ -13,9 +13,9 @@ public class BunTest {
 
     private static Stream<Arguments> bunProvider() {
         return Stream.of(
-                Arguments.of("black bun", 100),
-                Arguments.of("white bun", 200),
-                Arguments.of("red bun", 300)
+                Arguments.of("black bun", 100f),
+                Arguments.of("white bun", 200f),
+                Arguments.of("red bun", 300f)
         );
     }
 
